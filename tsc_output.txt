@@ -1,0 +1,3 @@
+app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/course-actions.tsx(11,34): error TS2307: Cannot find module '@/hooks/use-confetti-store' or its corresponding type declarations.
+lib/stripe.ts(4,3): error TS2322: Type '"2024-11-20.acacia"' is not assignable to type '"2025-11-17.clover"'.
+prisma.config.ts(4,35): error TS2307: Cannot find module 'prisma/config' or its corresponding type declarations.

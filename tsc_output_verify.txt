@@ -1,0 +1,45 @@
+.next/dev/types/validator.ts(225,31): error TS2344: Type 'typeof import("D:/Jbss/frontend/client/app/api/courses/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/courses">'.
+  Types of property 'DELETE' are incompatible.
+    Type '(req: Request, { params }: { params: Promise<{ courseId: string; }>; }) => Promise<any>' is not assignable to type '(request: NextRequest, context: { params: Promise<{}>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{}>; }' is not assignable to type '{ params: Promise<{ courseId: string; }>; }'.
+          Types of property 'params' are incompatible.
+            Type 'Promise<{}>' is not assignable to type 'Promise<{ courseId: string; }>'.
+              Property 'courseId' is missing in type '{}' but required in type '{ courseId: string; }'.
+.next/types/validator.ts(225,31): error TS2344: Type 'typeof import("D:/Jbss/frontend/client/app/api/courses/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/courses">'.
+  Types of property 'DELETE' are incompatible.
+    Type '(req: Request, { params }: { params: Promise<{ courseId: string; }>; }) => Promise<any>' is not assignable to type '(request: NextRequest, context: { params: Promise<{}>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{}>; }' is not assignable to type '{ params: Promise<{ courseId: string; }>; }'.
+          Types of property 'params' are incompatible.
+            Type 'Promise<{}>' is not assignable to type 'Promise<{ courseId: string; }>'.
+              Property 'courseId' is missing in type '{}' but required in type '{ courseId: string; }'.
+app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/course-actions.tsx(11,34): error TS2307: Cannot find module '@/hooks/use-confetti-store' or its corresponding type declarations.
+app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/price-form.tsx(45,5): error TS2322: Type 'Resolver<{ price: unknown; }, any, { price: number; }>' is not assignable to type 'Resolver<{ price: number; }, any, { price: number; }>'.
+  Types of parameters 'options' and 'options' are incompatible.
+    Type 'ResolverOptions<{ price: number; }>' is not assignable to type 'ResolverOptions<{ price: unknown; }>'.
+      Type 'unknown' is not assignable to type 'number'.
+app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/price-form.tsx(94,45): error TS2345: Argument of type '(values: z.infer<typeof formSchema>) => Promise<void>' is not assignable to parameter of type 'SubmitHandler<TFieldValues>'.
+  Types of parameters 'values' and 'data' are incompatible.
+    Type 'TFieldValues' is not assignable to type '{ price: number; }'.
+      Property 'price' is missing in type 'FieldValues' but required in type '{ price: number; }'.
+app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/price-form.tsx(96,15): error TS2322: Type 'Control<{ price: number; }, any, TFieldValues>' is not assignable to type 'Control<{ price: number; }, any, { price: number; }>'.
+  The types of '_options.resolver' are incompatible between these types.
+    Type 'Resolver<{ price: number; }, any, TFieldValues> | undefined' is not assignable to type 'Resolver<{ price: number; }, any, { price: number; }> | undefined'.
+      Type 'Resolver<{ price: number; }, any, TFieldValues>' is not assignable to type 'Resolver<{ price: number; }, any, { price: number; }>'.
+        Type 'ResolverResult<{ price: number; }, TFieldValues> | Promise<ResolverResult<{ price: number; }, TFieldValues>>' is not assignable to type 'ResolverResult<{ price: number; }, { price: number; }> | Promise<ResolverResult<{ price: number; }, { price: number; }>>'.
+          Type 'ResolverSuccess<TFieldValues>' is not assignable to type 'ResolverResult<{ price: number; }, { price: number; }> | Promise<ResolverResult<{ price: number; }, { price: number; }>>'.
+            Type 'ResolverSuccess<TFieldValues>' is not assignable to type 'ResolverSuccess<{ price: number; }>'.
+              Type 'TFieldValues' is not assignable to type '{ price: number; }'.
+                Property 'price' is missing in type 'FieldValues' but required in type '{ price: number; }'.
+app/api/courses/[courseId]/chapters/[chapterId]/route.ts(158,49): error TS2345: Argument of type '{ input: { url: any; }[]; playback_policy: "public"[]; test: false; }' is not assignable to parameter of type 'AssetCreateParams'.
+  Property 'inputs' is missing in type '{ input: { url: any; }[]; playback_policy: "public"[]; test: false; }' but required in type 'AssetCreateParams'.
+app/api/courses/route.ts(13,30): error TS2304: Cannot find name 'auth'.
+app/api/courses/route.ts(17,18): error TS2552: Cannot find name 'NextResponse'. Did you mean 'Response'?
+app/api/courses/route.ts(20,26): error TS2304: Cannot find name 'db'.
+app/api/courses/route.ts(35,18): error TS2552: Cannot find name 'NextResponse'. Did you mean 'Response'?
+app/api/courses/route.ts(45,33): error TS2304: Cannot find name 'db'.
+app/api/courses/route.ts(51,12): error TS2552: Cannot find name 'NextResponse'. Did you mean 'Response'?
+app/api/courses/route.ts(54,16): error TS2552: Cannot find name 'NextResponse'. Did you mean 'Response'?
+lib/stripe.ts(4,3): error TS2322: Type '"2024-11-20.acacia"' is not assignable to type '"2025-11-17.clover"'.
+prisma.config.ts(4,35): error TS2307: Cannot find module 'prisma/config' or its corresponding type declarations.
