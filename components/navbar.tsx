@@ -41,10 +41,10 @@ export function Navbar() {
         {/* We hide standard nav links if we are in Teacher Mode to keep it focused */}
         {!isTeacherPage && !isPlayerPage && (
            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground ml-6">
-             <Link href="/" className="hover:text-primary transition-colors">
+             <Link href="/" className="hover:text-primary transition-colors text-black">
                Home
              </Link>
-             <Link href="/search" className="hover:text-primary transition-colors">
+             <Link href="/search" className="hover:text-primary transition-colors text-black">
                Courses
              </Link>
            </nav>

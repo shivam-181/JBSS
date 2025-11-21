@@ -8,7 +8,6 @@ import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { ConfirmModal } from "@/components/modals/confirm-modal";
-import { useConfettiStore } from "@/hooks/use-confetti-store"; // We will build this fun hook later!
 
 interface CourseActionsProps {
   disabled: boolean;
