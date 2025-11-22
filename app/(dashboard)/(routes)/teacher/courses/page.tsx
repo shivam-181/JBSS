@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 import { Course } from "@prisma/client";
 import { Suspense } from "react";
 
+export const dynamic = "force-dynamic";
+
 import { columns } from "./_components/columns";
 import { ClientTableWrapper } from "./_components/client-table-wrapper";
 
