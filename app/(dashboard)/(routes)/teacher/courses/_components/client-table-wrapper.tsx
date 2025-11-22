@@ -6,6 +6,8 @@ import React from "react";
 
 // The actual DataTable component (Client Component that uses hooks)
 import { DataTable } from "./data-table";
+import type { DataTableProps } from "./data-table";
+
 
 // This is the component that will be rendered only on the client
 const DynamicDataTable = dynamic<DataTableProps<any, any>>(
