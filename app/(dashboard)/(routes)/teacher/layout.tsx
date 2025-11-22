@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,7 +54,9 @@ const TeacherNavbar = () => {
         {/* Search Bar (Desktop Only - Only show on search page or dashboard) */}
         {!isTeacherPage && (
           <div className="hidden md:block flex-1 max-w-sm ml-auto mr-4">
-             <SearchInput />
+             <Suspense>
+               <SearchInput />
+             </Suspense>
           </div>
         )}
 

@@ -1,10 +1,12 @@
 import { Navbar } from "@/components/navbar";
-import { SearchInput } from "@/components/search-input"; // <--- You had this
+import { Suspense } from "react";
+import { SearchInput } from "@/components/search-input"; 
 import { Sidebar } from "@/components/sidebar";
 import { MobileSidebar } from "@/components/mobile-sidebar";
 import { UserButton } from "@clerk/nextjs";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Toaster } from "@/components/ui/sonner";
+import { NavigationButtons } from "@/components/navigation-buttons";
 
 const DashboardLayout = ({
   children
@@ -23,13 +25,14 @@ const DashboardLayout = ({
         {/* Dashboard Header */}
         <div className="flex items-center p-4 border-b h-full gap-x-4 sticky top-0 z-50 bg-background/50 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
            <MobileSidebar />
+           <NavigationButtons />
            
-           {/* --- ADDED THIS SECTION --- */}
            {/* Show Search on Desktop only */}
            <div className="hidden md:block">
-             <SearchInput />
+             <Suspense>
+               <SearchInput />
+             </Suspense>
            </div>
-           {/* -------------------------- */}
 
            {/* Moved 'w-full' to 'ml-auto' to push content to the right properly */}
            <div className="ml-auto flex items-center gap-x-4">

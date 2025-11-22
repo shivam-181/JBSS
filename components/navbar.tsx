@@ -11,6 +11,7 @@ import { LogOut } from "lucide-react";
 import { SignedIn, SignedOut, UserButton, useClerk, useAuth } from "@clerk/nextjs";
 import { SearchInput } from "@/components/search-input"; 
 import { isTeacher } from "@/lib/teacher";
+import { NavigationButtons } from "@/components/navigation-buttons";
 
 export function Navbar() {
   const { userId } = useAuth();
@@ -20,14 +21,14 @@ export function Navbar() {
   // Check if we are on the teacher side or player side
   const isTeacherPage = pathname?.startsWith("/teacher");
   const isPlayerPage = pathname?.includes("/chapters");
-  const isSearchPage = pathname === "/search";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-[#e4eaee] border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         
-        {/* Logo Section */}
+        {/* Logo Section & Navigation Buttons */}
         <div className="flex items-center gap-2 mr-4">
+          <NavigationButtons />
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
             <Image
               src="/logo.png"
@@ -37,29 +38,25 @@ export function Navbar() {
               className="object-contain cursor-pointer"
             />
           </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        {/* We hide standard nav links if we are in Teacher Mode to keep it focused */}
-        {!isTeacherPage && !isPlayerPage && (
-           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground ml-6">
-             <Link href="/" className="hover:text-primary transition-colors text-black">
-               Home
-             </Link>
-             <Link href="/search" className="hover:text-primary transition-colors text-black">
-               Courses
-             </Link>
-           </nav>
-        )}
-
-        {/* Search Bar (Desktop Only - Only show on search page or dashboard) */}
-        {!isTeacherPage && (
+          
+          <div className="hidden md:flex items-center gap-x-2 ml-6">
+            <Link href="/">
+              <Button size="sm" variant="ghost">
+                Home
+              </Button>
+            </Link>
+            <Link href="/search">
+              <Button size="sm" variant="ghost">
+                Courses
+              </Button>
+            </Link>
+          </div>
           <div className="hidden md:block flex-1 max-w-sm ml-auto mr-4">
              <Suspense>
                <SearchInput />
              </Suspense>
           </div>
-        )}
+        </div>
 
         {/* Right Side (Auth & Utils) */}
         <div className="flex items-center gap-4 ml-auto">

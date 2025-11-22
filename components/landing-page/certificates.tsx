@@ -41,7 +41,7 @@ const achievements = [
 export const Certificates = () => {
   return (
     <section className="py-16 bg-[#e4eaee] container mx-auto px-4">
-      <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-primary dark:text-black">
+      <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-slate-900">
     Our Achievements
 </h3>
       <Carousel

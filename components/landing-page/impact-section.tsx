@@ -52,7 +52,7 @@ export const FeaturesSection = () => {
               viewport={{ once: true }}
               className="p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-card/50 dark:bg-card/30 border border-border/50 backdrop-blur-sm"
             >
-              <feature.icon className="w-8 h-8 md:w-10 md:h-10 mb-4 text-blue-600" />
+              <feature.icon className="w-8 h-8 md:w-10 md:h-10 mb-4 text-blue-600 dark:text-blue-400" />
               <h4 className="text-xl font-bold mb-3">
                 {feature.title}
               </h4>

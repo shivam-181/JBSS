@@ -32,8 +32,8 @@ export default async function Home() {
       <Navbar />
       
       {/* 1. HERO SECTION */}
-      <main className="flex flex-col items-center bg-[#e4eaee] justify-center text-center p-4 pt-32 pb-32 overflow-hidden relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none opacity-50 dark:opacity-20" />
+      <main className="flex flex-col items-center bg-[#e4eaee] justify-center text-center p-4 pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none opacity-50 dark:opacity-20" />
         
         <div className="inline-flex items-center gap-2 bg-[#ffffff] text-black px-3 py-1 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm font-medium text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <span className="flex h-2  w-2 rounded-full bg-blue-500 animate-pulse" />
