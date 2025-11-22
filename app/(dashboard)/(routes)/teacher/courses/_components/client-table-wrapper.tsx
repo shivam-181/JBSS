@@ -4,23 +4,22 @@ import { ColumnDef } from "@tanstack/react-table";
 import dynamic from "next/dynamic";
 import React from "react";
 
-// The actual DataTable component (Client Component that uses hooks)
-import { DataTable,DataTableProps } from "./data-table";
-
-// This is the component that will be rendered only on the client
-const DynamicDataTable = dynamic<DataTableProps<any, any>>(
-  () => Promise.resolve(DataTable),
-  { ssr: false } // <-- This instruction is now valid because the wrapper is "use client"
-);
-
-interface ClientTableWrapperProps {
-  columns: ColumnDef<any, any>[];
+// --- IMPORTANT ---
+// 1. Manually define the necessary props type locally to avoid circular dependencies
+interface ClientDataTableProps {
+  columns: any[];
   data: any[];
 }
 
-export const ClientTableWrapper: React.FC<ClientTableWrapperProps> = ({ columns, data }) => {
+// 2. Dynamically import the DataTable component, bypassing SSR
+const DynamicDataTable = dynamic(() => 
+  import("./data-table").then((mod) => mod.DataTable),
+  { ssr: false } // This is now allowed inside a "use client" file
+);
+
+// 3. This is the component called by the server
+export const ClientTableWrapper: React.FC<ClientDataTableProps> = ({ columns, data }) => {
   return (
-    // We add a loading fallback here because ssr: false means it won't appear instantly
     <React.Suspense fallback={<div>Loading table...</div>}>
       <DynamicDataTable columns={columns} data={data} />
     </React.Suspense>
