@@ -1,5 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
 import { db } from "@/lib/db";
 import { SearchInput } from "@/components/search-input";
@@ -44,10 +45,14 @@ export default async function SearchPage({
   return (
     <>
       <div className="px-6 pt-6 md:hidden md:mb-0 block">
-        <SearchInput />
+        <Suspense>
+          <SearchInput />
+        </Suspense>
       </div>
       <div className="p-6 space-y-4">
-        <Categories items={categories} />
+        <Suspense>
+          <Categories items={categories} />
+        </Suspense>
         
         {/* RENDER THE COURSE LIST */}
         <CoursesList items={courses} />
