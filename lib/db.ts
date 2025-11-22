@@ -4,7 +4,7 @@ declare global {
   var prisma: PrismaClient | undefined;
 }
 
-// Prevents multiple instances of Prisma Client in development
+// Prevents multiple instances of Prisma Client in developments
 export const db = globalThis.prisma || new PrismaClient();
 
 if (process.env.NODE_ENV !== "production") globalThis.prisma = db;
