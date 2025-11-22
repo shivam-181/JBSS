@@ -1,18 +1,10 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import dynamic from "next/dynamic";
-import React from "react";
 import { Course } from "@prisma/client";
 
 import { columns } from "./_components/columns";
-import { DataTableProps } from "./_components/data-table";
-
-// Dynamically import the DataTable component, disabling Server-Side Rendering (SSR)
-const ClientTableWrapper = dynamic(
-  () => import("./_components/data-table").then((mod) => mod.DataTable),
-  { ssr: false }
-) as <TData, TValue>(props: DataTableProps<TData, TValue>) => React.JSX.Element;
+import { ClientTableWrapper } from "./_components/client-table-wrapper";
 
 export default async function CoursesPage() {
   const { userId } = await auth();
