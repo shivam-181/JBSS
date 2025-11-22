@@ -42,8 +42,8 @@ const achievements = [
 
 export const GallerySection = () => {
   return (
-    <section className="py-12 md:py-16 bg-[#e4eaee] dark:bg-slate-950 container mx-auto px-4">
-     <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-primary dark:text-white">
+    <section className="py-16 bg-[#e4eaee] container mx-auto px-4">
+     <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-slate-900">
     Our Director
 </h3>
       <Carousel
@@ -60,15 +60,13 @@ export const GallerySection = () => {
             <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card className="border-none shadow-none bg-transparent">
-                <CardContent className="flex aspect-[4/5] items-center justify-center p-0 relative overflow-hidden rounded-xl">
-  <div className="absolute inset-0 overflow-hidden">
-    <Image
-      src={item.image}
-      alt={item.title}
-      fill
-      className="object-cover transition-transform duration-700 ease-out hover:scale-110"
-    />
-  </div>
+                <CardContent className="flex aspect-[4/5] items-center justify-center p-0 relative overflow-hidden rounded-xl group">
+  <Image
+    src={item.image}
+    alt={item.title}
+    fill
+    className="object-cover transition-transform duration-500 group-hover:scale-105"
+  />
 
   <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
     <h4 className="text-white font-bold text-xl">{item.title}</h4>
