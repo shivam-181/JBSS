@@ -42,8 +42,8 @@ const achievements = [
 
 export const GallerySection = () => {
   return (
-    <section className="py-16 bg-[#e4eaee] container mx-auto px-4">
-     <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-slate-900">
+    <section className="py-16 bg-[#e4eaee] dark:bg-slate-950 container mx-auto px-4">
+     <h3 className="text-3xl md:text-5xl font-extrabold mb-10 text-center tracking-tight text-slate-900 dark:text-white">
     Our Director
 </h3>
       <Carousel
