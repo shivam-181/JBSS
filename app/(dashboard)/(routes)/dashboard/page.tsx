@@ -6,6 +6,8 @@ import { getAnalytics } from "@/actions/get-analytics";
 import { InfoCard } from "./_components/info-card";
 import { Chart } from "@/components/chart";
 
+export const dynamic = "force-dynamic";
+
 export default async function Dashboard() {
   const { userId } = await auth();
 
