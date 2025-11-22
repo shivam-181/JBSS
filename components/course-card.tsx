@@ -28,35 +28,36 @@ export const CourseCard = ({
 }: CourseCardProps) => {
   return (
     <Link href={`/courses/${id}`}>
-      <div className="group hover:shadow-md transition overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-lg p-3 h-full shadow-sm">
-        <div className="relative w-full aspect-video rounded-md overflow-hidden">
+      <div className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden border border-slate-200/60 dark:border-slate-700/50 bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-xl h-full shadow-md">
+        <div className="relative w-full aspect-video overflow-hidden">
           <Image
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
             alt={title}
             src={imageUrl}
           />
         </div>
-        <div className="flex flex-col pt-2">
-          <div className="text-lg md:text-base font-medium group-hover:text-sky-700 transition line-clamp-2 dark:text-slate-200">
+        <div className="flex flex-col p-4 space-y-2">
+          <div className="text-lg md:text-base font-bold group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors line-clamp-2 text-[#000000] dark:text-slate-100">
             {title}
           </div>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs font-bold text-[#000000] dark:text-slate-400 uppercase tracking-wide">
             {category}
           </p>
-          <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs">
-            <div className="flex items-center gap-x-1 text-slate-500 dark:text-slate-400">
+          <div className="flex items-center gap-x-2 text-sm">
+            <div className="flex items-center gap-x-1.5 text-[#000000] dark:text-slate-300 font-medium">
               <IconBadge size="sm" icon={BookOpen} />
-              <span>
+              <span className="text-xs">
                 {chaptersLength} {chaptersLength === 1 ? "Chapter" : "Chapters"}
               </span>
             </div>
           </div>
-          {/* We will add Progress Bar here later */}
           
-          <p className="text-md md:text-sm font-medium text-slate-700 dark:text-slate-200">
-            {formatPrice(price)}
-          </p>
+          <div className="pt-2 mt-auto border-t border-slate-200 dark:border-slate-700">
+            <p className="text-lg font-bold text-[#000000] dark:text-slate-50">
+              {formatPrice(price)}
+            </p>
+          </div>
         </div>
       </div>
     </Link>

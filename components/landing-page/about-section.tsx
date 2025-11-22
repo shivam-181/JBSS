@@ -1,5 +1,9 @@
 "use client";
 
+
+
+"use client";
+
 import { motion } from "framer-motion";
 
 export const AboutSection = () => {
@@ -11,10 +15,10 @@ export const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter text-slate-900"
+          className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter text-[#000000] dark:text-black"
         >
           Empowering Education, <br className="hidden md:block" />
-          <span className="text-blue-600 dark:text-blue-400">Skill. Empower. Elevate.</span>
+          <span className="text-blue-600 dark:text-blue-600">Skill. Empower. Elevate.</span>
         </motion.h2>
         
         <motion.p 
@@ -22,7 +26,7 @@ export const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg text-[#000000] dark:text-black max-w-3xl mx-auto leading-relaxed font-medium"
         >
           Jan Bhawna Sewa Sansthan, Jamui, established on 12 July 2007 (Registration No. 566), is a trusted and registered NGO dedicated to advancing education, skill development, and community welfare in Bihar.
 

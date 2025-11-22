@@ -1,12 +1,18 @@
+import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
+import { CoursePaymentProcessing } from "./_components/course-payment-processing";
 
 export default async function CourseIdPage({
-  params
+  params,
+  searchParams
 }: {
-  params: Promise<{ courseId: string }>
+  params: Promise<{ courseId: string }>;
+  searchParams: Promise<{ success?: string }>;
 }) {
+  const { userId } = await auth();
   const { courseId } = await params;
+  const { success } = await searchParams;
 
   const course = await db.course.findUnique({
     where: {
@@ -26,6 +32,22 @@ export default async function CourseIdPage({
 
   if (!course) {
     return redirect("/");
+  }
+
+  // Check for purchase if we have a success param
+  if (userId && success) {
+    const purchase = await db.purchase.findUnique({
+      where: {
+        userId_courseId: {
+          userId,
+          courseId,
+        }
+      }
+    });
+
+    if (!purchase) {
+      return <CoursePaymentProcessing />;
+    }
   }
 
   // Redirect to the first chapter

@@ -5,6 +5,10 @@ const isPublicRoute = createRouteMatcher([
   '/', 
   '/sign-in(.*)', 
   '/sign-up(.*)',
+  '/about(.*)',
+  '/events(.*)',
+  '/privacy-policy(.*)',
+  '/terms-of-service(.*)',
   '/api(.*)' // We keep API public for now, we will secure it later
 ])
 

@@ -50,9 +50,9 @@ export const ContactSection = () => {
     };
 
     return (
-        <section className="py-24 bg-[#e4eaee]">
+        <section className="py-24 bg-background">
             <div className="container mx-auto px-4 max-w-4xl">
-                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-16 text-center overflow-hidden relative">
+                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-16 text-center overflow-hidden relative shadow-2xl">
                     
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/30 blur-[120px] rounded-full pointer-events-none" />
                     
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Name" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Input placeholder="Name" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/20 transition-colors" {...field} />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -83,7 +83,7 @@ export const ContactSection = () => {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Phone" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Input placeholder="Phone" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/20 transition-colors" {...field} />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -96,7 +96,7 @@ export const ContactSection = () => {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Email" type="email" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Input placeholder="Email" type="email" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/20 transition-colors" {...field} />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -108,7 +108,7 @@ export const ContactSection = () => {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Textarea placeholder="Your Message" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Textarea placeholder="Your Message" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/20 transition-colors" {...field} />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -119,7 +119,7 @@ export const ContactSection = () => {
                             size="lg" 
                             type="submit"
                             disabled={isSubmitting || !isValid}
-                            className="w-full bg-white text-black hover:bg-white/90"
+                            className="w-full bg-white text-black hover:bg-white/90 font-semibold"
                         >
                             Send Enquiry
                         </Button>

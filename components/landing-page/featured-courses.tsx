@@ -13,17 +13,23 @@ interface FeaturedCoursesProps {
 
 export const FeaturedCourses = ({ courses }: FeaturedCoursesProps) => {
   return (
-    <section className="py-20 bg-slate-50 dark:bg-slate-950">
-      <div className="container mx-auto px-4"> {/* <-- ADDED MISSING CONTAINER HERE */}
-        <div className="flex justify-between items-center mb-10">
-          <h3 className="text-3xl font-bold dark:text-white">
-            Popular Courses
-          </h3>
+    <section className="py-24 bg-slate-50/50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+      <div className="container mx-auto px-4 max-w-screen-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#000000] dark:text-slate-50 mb-2">
+              Featured Courses
+            </h2>
+            <p className="font-medium text-[#000000] dark:text-slate-400">
+              Explore our top-rated programs designed for your career growth.
+            </p>
+          </div>
           <a 
             href="/search" 
-            className="text-sm font-medium hover:underline text-blue-600 dark:text-sky-400"
+            className="group flex items-center gap-x-2 text-sm font-bold text-[#000000] dark:text-blue-400 hover:text-slate-800 dark:hover:text-blue-300 transition-colors"
           >
-            View All &rarr;
+            View All Courses 
+            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
         

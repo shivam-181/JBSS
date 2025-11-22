@@ -37,7 +37,7 @@ export const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-extrabold dark:text-white mb-12 text-center tracking-tight"
+          className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-12 text-center tracking-tight"
         >
           We Deliver Landmark Projects
         </motion.h3>
@@ -50,21 +50,21 @@ export const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-card/50 dark:bg-card/30 border border-border/50 backdrop-blur-sm"
+              className="p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white dark:bg-card/30 border border-slate-200 dark:border-border/50 backdrop-blur-sm"
             >
               <feature.icon className="w-8 h-8 md:w-10 md:h-10 mb-4 text-blue-600 dark:text-blue-400" />
-              <h4 className="text-xl font-bold mb-3">
+              <h4 className="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">
                 {feature.title}
               </h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
           ))}
         </div>
         
-        {/* Placeholder for the descriptive text */}
-        <p className="mt-16 max-w-4xl mx-auto text-lg text-center text-muted-foreground">
+        {/* Descriptive text */}
+        <p className="mt-16 max-w-4xl mx-auto text-lg text-center text-slate-600 dark:text-slate-400">
           At our institute, we offer a wide range of courses and programs to meet the needs of students at all levels. Whether you are just starting out in your career or looking to enhance your existing skills, we have a program that can help you achieve your goals.
         </p>
       </div>

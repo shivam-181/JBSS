@@ -25,25 +25,25 @@
   }
  
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --background: 222 30% 15%; /* Lighter and less saturated dark bg */
+    --foreground: 210 40% 98%;
+    --card: 222 30% 18%; /* Slightly lighter than bg */
+    --card-foreground: 210 40% 98%;
+    --popover: 222 30% 15%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 70% 60%; /* Less saturated blue */
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 20% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 20% 20%;
+    --muted-foreground: 215 20% 75%;
+    --accent: 217 20% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 20% 25%;
+    --input: 217 20% 20%;
+    --ring: 217 70% 60%;
   }
 }
 
@@ -114,4 +114,19 @@ html {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, #2563eb, #7c3aed); /* blue-600 to violet-600 */
+}
+
+/* Force Black Text Utility */
+.force-black-text {
+  color: #000000 !important;
+}
+
+.dark .force-black-text {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Specific overrides for headings in dark mode if needed */
+.dark h2.force-black-text, 
+.dark h3.force-black-text {
+  color: #f8fafc !important; /* slate-50 */
 }
