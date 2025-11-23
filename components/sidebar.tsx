@@ -59,7 +59,7 @@ export const Sidebar = () => {
       <div className="px-3 py-2 flex-1">
         <Link href="/" className="flex items-center pl-2 mb-10">
              <Image
-               src="/logo.png"
+               src="/jbsslogo.png"
                alt="JBSS Logo"
                width={200}
                height={70}

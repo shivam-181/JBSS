@@ -31,7 +31,7 @@ export function Navbar() {
           <NavigationButtons />
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
             <Image
-              src="/logo.png"
+              src="/jbsslogo.png"
               alt="JBSS Logo"
               width={250}
               height={80}

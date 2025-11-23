@@ -8,6 +8,7 @@ import { db } from "@/lib/db";
 import { AboutSection } from "@/components/landing-page/about-section";
 import { GallerySection } from "@/components/landing-page/gallery-section";
 import {Certificates} from "@/components/landing-page/certificates";
+import { IsoButton } from "@/components/landing-page/iso-button";
 import { FeaturedCourses } from "@/components/landing-page/featured-courses";
 import { ContactSection } from "@/components/landing-page/contact-section";
 import { Footer } from "@/components/landing-page/footer";
@@ -60,18 +61,22 @@ export default async function Home() {
           Learn from expert trainers, build real digital skills, and unlock new career opportunities.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 z-10">
-          <Button asChild size="lg" className="rounded-full h-12 px-8 text-base bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-105">
-            <Link href="/search">
-              Start Learning Now
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full h-12 px-8 text-base border-slate-200 dark:border-slate-700 hover:bg-secondary/80 transition-all hover:scale-105 bg-background/50 backdrop-blur-sm">
-            <Link href="/courses">
-              View Curriculum
-            </Link>
-          </Button>
+        <div className="flex flex-col items-center gap-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 z-10">
+          <IsoButton />
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button asChild size="lg" className="rounded-full h-12 px-8 text-base bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-105">
+              <Link href="/search">
+                Start Learning Now
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full h-12 px-8 text-base border-slate-200 dark:border-slate-700 hover:bg-secondary/80 transition-all hover:scale-105 bg-background/50 backdrop-blur-sm">
+              <Link href="/courses">
+                View Curriculum
+              </Link>
+            </Button>
+          </div>
         </div>
       </main>
       {/* 2. FEATURES SECTION (NEW POSITION) */}
