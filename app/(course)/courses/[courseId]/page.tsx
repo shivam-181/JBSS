@@ -14,6 +14,10 @@ export default async function CourseIdPage({
   const { courseId } = await params;
   const { success } = await searchParams;
 
+  if (!userId) {
+    return redirect("/sign-in");
+  }
+
   const course = await db.course.findUnique({
     where: {
       id: courseId,

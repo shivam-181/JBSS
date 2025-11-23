@@ -9,7 +9,8 @@ const isPublicRoute = createRouteMatcher([
   '/events(.*)',
   '/privacy-policy(.*)',
   '/terms-of-service(.*)',
-  '/api(.*)' // We keep API public for now, we will secure it later
+  '/api(.*)', // We keep API public for now, we will secure it later
+  '/courses(.*)'
 ])
 
 export default clerkMiddleware(async (auth, request) => {
