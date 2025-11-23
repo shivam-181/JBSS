@@ -48,9 +48,14 @@ export default async function CourseIdPage({
     if (!purchase) {
       return <CoursePaymentProcessing />;
     }
+
+    // Purchase confirmed! Redirect to the first chapter
+    if (course.chapters.length > 0) {
+      return redirect(`/courses/${course.id}/chapters/${course.chapters[0].id}`);
+    }
   }
 
-  // Redirect to the first chapter
+  // Redirect to the first chapter for users who already own the course
   if (course.chapters.length > 0) {
     return redirect(`/courses/${course.id}/chapters/${course.chapters[0].id}`);
   }
