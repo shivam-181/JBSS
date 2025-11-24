@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useAuth } from "@clerk/nextjs"; // <--- To get current user ID
+import { useAuth } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import { 
   LayoutDashboard, 
@@ -12,7 +12,7 @@ import {
   BarChart, 
   ListChecks
 } from "lucide-react";
-import { isTeacher } from "@/lib/teacher"; // <--- Import our helper
+import { isTeacher } from "@/lib/teacher";
 
 const guestRoutes = [
   {
@@ -61,8 +61,8 @@ export const Sidebar = () => {
              <Image
                src="/jbsslogo.png"
                alt="JBSS Logo"
-               width={200}
-               height={70}
+               width={250}
+               height={80}
                className="object-contain object-left"
              />
         </Link>

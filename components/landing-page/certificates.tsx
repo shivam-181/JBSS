@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import {
   Carousel,
@@ -20,6 +21,7 @@ const achievements = [
     id: 2,
     title: "ISO 9001:2015 Quality Certification Achieved",
     image: "https://jbss.org.in/web1adminpanel/uploadgallery/68a3f377ae2f8.jpg",
+    link: "https://jbss.org.in/files/ISO_Certified.pdf",
   },
   {
     id: 3,
@@ -59,15 +61,31 @@ export const Certificates = () => {
               <div className="p-1">
                 <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex aspect-[4/5] items-center justify-center p-0 relative overflow-hidden rounded-xl group">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                      <h4 className="text-white font-bold text-xl">{item.title}</h4>
-                    </div>
+                    {item.link ? (
+                      <Link href={item.link} target="_blank" className="relative w-full h-full block">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
+                          <h4 className="text-white font-bold text-xl">{item.title}</h4>
+                        </div>
+                      </Link>
+                    ) : (
+                      <>
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
+                          <h4 className="text-white font-bold text-xl">{item.title}</h4>
+                        </div>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               </div>

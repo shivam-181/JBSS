@@ -7,30 +7,30 @@ const EventsPage = () => {
   const events = [
     {
       id: 1,
-      title: "Annual Tech Symposium 2025",
-      date: "March 15, 2025",
-      time: "10:00 AM - 4:00 PM",
-      location: "JBSS Main Campus Hall",
-      description: "Join us for a day of innovation and technology. Featuring guest speakers from top tech companies, project showcases by our students, and networking opportunities.",
-      category: "Technology"
+      title: "New IT Portal & LMS Launch",
+      date: "December 01, 2025",
+      time: "10:00 AM - 1:00 PM",
+      location: "Online / All SDCs",
+      description: "Launch of the new BSDM IT Portal, Learning Management System (LMS), and e-Content platform. Mandatory training for all SDCs.",
+      category: "Launch Event"
     },
     {
       id: 2,
-      title: "Career Counseling Workshop",
-      date: "April 05, 2025",
+      title: "Enhanced KYP 2025 Orientation",
+      date: "December 15, 2025",
       time: "11:00 AM - 2:00 PM",
-      location: "Online (Zoom)",
-      description: "Expert guidance on choosing the right career path in the digital age. Open to all students and parents.",
-      category: "Workshop"
+      location: "JBSS Main Campus Hall",
+      description: "Introduction to the new AI-based digital learning modules and hybrid training model for the Kushal Yuva Program.",
+      category: "Orientation"
     },
     {
       id: 3,
-      title: "New Batch Orientation: KYP",
-      date: "April 10, 2025",
-      time: "09:00 AM - 12:00 PM",
-      location: "Room 101, JBSS Campus",
-      description: "Orientation session for the upcoming Kushal Yuva Program batch. Learn about the curriculum, facilities, and placement support.",
-      category: "Orientation"
+      title: "Mega Job Fair (Rozgar Mela)",
+      date: "January 10, 2026",
+      time: "09:00 AM - 5:00 PM",
+      location: "Gandhi Maidan, Patna",
+      description: "Large-scale job fair organized by BSDM connecting KYP graduates with top employers. Direct interview opportunities available.",
+      category: "Career Fair"
     }
   ];
 

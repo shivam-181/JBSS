@@ -116,10 +116,10 @@ export default async function ChapterIdPage({
       {/* CHAPTER DETAILS */}
       <div className="flex flex-col md:flex-row items-center justify-between mt-6 gap-y-4">
         <div className="flex flex-col gap-y-2">
-          <h2 className="text-2xl md:text-3xl font-bold !text-black dark:!text-slate-50">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-50">
             {chapter.title}
           </h2>
-          <p className="!text-black dark:!text-slate-400 text-sm font-medium">
+          <p className="text-slate-700 dark:text-slate-400 text-sm font-medium">
             Chapter {chapter.position}
           </p>
         </div>
@@ -139,9 +139,9 @@ export default async function ChapterIdPage({
       <Separator className="my-8 bg-slate-200 dark:bg-slate-800" />
       
       {/* DESCRIPTION */}
-      <div className="prose prose-slate dark:prose-invert max-w-none">
-         <h3 className="text-xl font-bold mb-4 !text-black dark:!text-slate-50">About this chapter</h3>
-         <div className="!text-black dark:!text-slate-300 leading-relaxed font-medium">
+      <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-slate-900 prose-p:text-slate-900 dark:prose-headings:text-slate-50 dark:prose-p:text-slate-300">
+         <h3 className="text-xl font-bold mb-4">About this chapter</h3>
+         <div className="leading-relaxed font-medium">
             {chapter.description || "No description provided."}
          </div>
       </div>

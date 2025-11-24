@@ -21,6 +21,7 @@ export const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li><a href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
             <li><a href="/terms-of-service" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+            <li><a href="/refund-policy" className="hover:text-blue-400 transition-colors">Refund Policy</a></li>
           </ul>
         </div>
         <div>

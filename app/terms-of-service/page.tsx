@@ -1,65 +1,92 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/landing-page/footer";
+import { FileText } from "lucide-react";
 
 const TermsOfServicePage = () => {
-  return ( 
+  return (
     <div className="h-full bg-[#e4eaee]">
       <Navbar />
-      <main className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="bg-slate-50/50 p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200 space-y-8">
-          <div className="border-b border-slate-100 pb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Terms of Service</h1>
-            <p className="text-slate-500">Last Updated: November 22, 2025</p>
+      
+      <main className="container mx-auto px-4 py-12 max-w-5xl">
+        <div className="space-y-8">
+          {/* Header Section */}
+          <div className="text-center space-y-4 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Terms of Service</h1>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Effective Date: November 24, 2025
+            </p>
           </div>
 
-          <div className="space-y-6 text-slate-600 leading-relaxed">
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
-              <p>
-                By accessing and using the Jan Bhawna Seva Sansthan (JBSS) website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
-              </p>
-            </section>
+          {/* Content Card */}
+          <div className="bg-slate-50/50 p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
+            <div className="max-w-none text-slate-700 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:mb-2 [&_strong]:font-semibold [&_strong]:text-slate-900">
+              
+              <div className="flex items-center gap-4 mb-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                <div className="p-2 bg-emerald-50 rounded-lg">
+                  <FileText className="w-6 h-6 text-emerald-600" />
+                </div>
+                <p className="text-sm font-medium text-slate-700 m-0 !mb-0">
+                  Please read these terms carefully before using our services. By enrolling, you agree to abide by JBSS and BSDM regulations.
+                </p>
+              </div>
 
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">2. Use of Services</h2>
+              <h3>1. Acceptance of Terms</h3>
               <p>
-                You agree to use our website and services only for lawful purposes. You are prohibited from violating or attempting to violate the security of the website, including, without limitation, accessing data not intended for you or logging into a server or account which you are not authorized to access.
+                By accessing or using the JBSS Education website and services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.
               </p>
-            </section>
 
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">3. Intellectual Property</h2>
+              <h3>2. Course Enrollment & Eligibility</h3>
               <p>
-                All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of JBSS or its content suppliers and protected by international copyright laws.
+                Enrollment in courses like the Kushal Yuva Program (KYP) is subject to eligibility criteria defined by the Bihar Skill Development Mission (BSDM).
               </p>
-            </section>
+              <ul>
+                <li><strong>Age Limit:</strong> Applicants must fall within the age bracket specified for each program (typically 15-25 years for KYP).</li>
+                <li><strong>Documents:</strong> You must provide authentic documents (Aadhaar, 10th Marksheet, Bank Passbook) for verification.</li>
+                <li><strong>Attendance:</strong> A minimum of 80% attendance is mandatory to appear for the final examination and receive certification.</li>
+              </ul>
 
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">4. Course Enrollment and Fees</h2>
+              <h3>3. User Conduct</h3>
               <p>
-                Enrollment in our courses is subject to availability and acceptance by JBSS. Fees for courses are subject to change without notice. We reserve the right to refuse service to anyone for any reason at any time.
+                You agree to use our services only for lawful purposes. You are prohibited from:
               </p>
-            </section>
+              <ul>
+                <li>Sharing your login credentials with others.</li>
+                <li>Engaging in any activity that disrupts the learning environment or damages institute property.</li>
+                <li>Attempting to cheat or manipulate online assessments.</li>
+              </ul>
 
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">5. Limitation of Liability</h2>
+              <h3>4. Certification</h3>
               <p>
-                JBSS shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.
+                Certificates are issued directly by the Bihar Skill Development Mission (BSDM) upon successful completion of the course and passing the final assessment. JBSS is a facilitator and does not issue independent government certificates.
               </p>
-            </section>
 
-            <section>
-              <h2 className="text-xl font-bold text-slate-900 mb-3">6. Changes to Terms</h2>
+              <h3>5. Intellectual Property</h3>
               <p>
-                We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes.
+                The Service and its original content (excluding BSDM course material), features, and functionality are and will remain the exclusive property of Jan Bhawna Sewa Sansthan and its licensors. Unauthorized reproduction of course materials is strictly prohibited.
               </p>
-            </section>
+
+              <h3>6. Limitation of Liability</h3>
+              <p>
+                In no event shall Jan Bhawna Sewa Sansthan, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+              </p>
+
+              <h3>7. Termination</h3>
+              <p>
+                We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+              </p>
+
+              <h3>8. Governing Law</h3>
+              <p>
+                These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the jurisdiction of courts in Jamui, Bihar.
+              </p>
+            </div>
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
-   );
+  );
 }
  
 export default TermsOfServicePage;
