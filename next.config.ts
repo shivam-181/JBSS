@@ -23,7 +23,14 @@ const nextConfig = {
         pathname: "/**"
       }
     ]
-  }
+  },
+  compress: true,
+  poweredByHeader: false,
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
 };
 
 export default nextConfig;

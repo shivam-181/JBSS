@@ -1,6 +1,7 @@
 import { Course } from "@prisma/client";
 import { CourseCard } from "@/components/course-card";
 import Image from "next/image";
+import Link from "next/link";
 
 // Define the precise type for the course data fetched from the DB
 type CourseWithCategoryAndChapters = Course & {
@@ -39,13 +40,13 @@ export const FeaturedCourses = ({ courses }: FeaturedCoursesProps) => {
              </div>
           </div>
           
-          <a 
+          <Link 
             href="/search" 
             className="group flex items-center gap-x-2 text-sm font-bold text-black transition-colors bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full"
           >
             View All Courses 
             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-          </a>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

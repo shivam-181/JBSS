@@ -10,8 +10,48 @@ import { ChatWidget } from "@/components/chat-widget";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EduPlatform | Learn from the Best",
-  description: "A premium educational platform for future leaders.",
+  title: {
+    default: "JBSS Education | Bihar's Leading Skill Institute",
+    template: "%s | JBSS Education"
+  },
+  description: "Empowering Bihar's youth with industry-ready skills through BSDM-certified programs like KYP & BSCFA. Join JBSS Education for a brighter future.",
+  keywords: ["JBSS Education", "Skill Development", "Bihar", "KYP", "BSDM", "Computer Course", "Vocational Training", "Career Institute"],
+  authors: [{ name: "JBSS Education" }],
+  creator: "JBSS Education",
+  publisher: "JBSS Education",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://jbss.org.in",
+    title: "JBSS Education | Bihar's Leading Skill Institute",
+    description: "Empowering Bihar's youth with industry-ready skills through BSDM-certified programs like KYP & BSCFA.",
+    siteName: "JBSS Education",
+    images: [
+      {
+        url: "/hero-final.jpg", // Using our hero image as the OG image
+        width: 1200,
+        height: 630,
+        alt: "JBSS Education Campus",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JBSS Education | Bihar's Leading Skill Institute",
+    description: "Empowering Bihar's youth with industry-ready skills through BSDM-certified programs like KYP & BSCFA.",
+    images: ["/hero-final.jpg"],
+  },
 };
 
 export default function RootLayout({

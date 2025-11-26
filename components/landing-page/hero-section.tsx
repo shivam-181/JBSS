@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IsoButton } from "@/components/landing-page/iso-button";
@@ -8,7 +9,14 @@ export const HeroSection = () => {
     <main className="flex flex-col items-center justify-center text-center p-6 pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden relative bg-gradient-to-b from-background to-secondary/20 dark:from-background dark:to-slate-900/50">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/hero-final.jpg')] bg-cover bg-center opacity-[0.59] dark:opacity-50" />
+        <Image
+          src="/hero-final.jpg"
+          alt="Students learning"
+          fill
+          className="object-cover object-center opacity-[0.59] dark:opacity-50"
+          priority
+          quality={90}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] bg-blue-500/10 dark:bg-blue-500/20 blur-[120px] rounded-full pointer-events-none z-0" />
