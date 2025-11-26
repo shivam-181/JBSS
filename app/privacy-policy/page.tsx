@@ -7,7 +7,7 @@ const PrivacyPolicyPage = () => {
     <div className="h-full bg-[#e4eaee]">
       <Navbar />
       
-      <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <main className="container mx-auto px-4 pt-24 pb-12 max-w-5xl">
         <div className="space-y-8">
           {/* Header Section */}
           <div className="text-center space-y-4 mb-8">

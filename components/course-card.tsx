@@ -38,7 +38,7 @@ export const CourseCard = ({
           />
         </div>
         <div className="flex flex-col p-4 space-y-2">
-          <div className="text-lg md:text-base font-bold group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors line-clamp-2 text-[#000000] dark:text-slate-100">
+          <div className="text-lg md:text-base font-bold group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors line-clamp-2 text-black">
             {title}
           </div>
           <p className="text-xs font-bold text-[#000000] dark:text-slate-400 uppercase tracking-wide">

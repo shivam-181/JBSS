@@ -1,6 +1,7 @@
+
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -12,22 +13,55 @@ import { SignedIn, SignedOut, UserButton, useClerk, useAuth } from "@clerk/nextj
 import { SearchInput } from "@/components/search-input"; 
 import { isTeacher } from "@/lib/teacher";
 import { NavigationButtons } from "@/components/navigation-buttons";
+import { cn } from "@/lib/utils";
+import { MobileSidebar } from "@/components/mobile-sidebar";
 
 export function Navbar() {
   const { userId } = useAuth();
   const { openSignIn } = useClerk();
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Check if we are on the teacher side or player side
   const isTeacherPage = pathname?.startsWith("/teacher");
   const isPlayerPage = pathname?.includes("/chapters");
+  const isSearchPage = pathname === "/search";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Determine if we should force a solid background (e.g., on dashboard or search pages where there is no hero image)
+  // For now, we'll keep the transparent effect on the home page and about page mainly.
+  // You can adjust this logic if you want it solid on other pages always.
+  const isTransparentPage = pathname === "/" || pathname === "/about";
+  
+  // If not on a "transparent" page, always show solid background
+  const showSolid = isScrolled || !isTransparentPage;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 shadow-sm">
+    <header 
+      className={cn(
+        "fixed top-0 z-50 w-full transition-all duration-300 ease-in-out",
+        showSolid 
+          ? "border-b border-border/40 bg-background/75 backdrop-blur-md shadow-sm" 
+          : "border-transparent bg-transparent shadow-none"
+      )}
+    >
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         
         {/* Logo Section & Navigation Buttons */}
         <div className="flex items-center gap-2 mr-4">
+          <MobileSidebar />
           <NavigationButtons />
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
             <Image

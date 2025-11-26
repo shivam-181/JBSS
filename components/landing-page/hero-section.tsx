@@ -7,9 +7,13 @@ export const HeroSection = () => {
   return (
     <main className="flex flex-col items-center justify-center text-center p-6 pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden relative bg-gradient-to-b from-background to-secondary/20 dark:from-background dark:to-slate-900/50">
       {/* Background Effects */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] bg-blue-500/10 dark:bg-blue-500/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-[url('/hero-final.jpg')] bg-cover bg-center opacity-[0.59] dark:opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+      </div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] bg-blue-500/10 dark:bg-blue-500/20 blur-[120px] rounded-full pointer-events-none z-0" />
       
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-background/50 backdrop-blur-md text-sm font-medium text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 shadow-sm">
+      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-background/50 backdrop-blur-md text-sm font-medium text-black mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 shadow-sm">
         <span className="relative flex h-2.5 w-2.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
@@ -19,16 +23,16 @@ export const HeroSection = () => {
 
       <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 z-10">
         Empower Your Future with <br className="hidden md:block" />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 dark:from-blue-400 dark:to-violet-400">
+        <span className="text-black">
           JBSS Education
         </span>
       </h1>
       
-      <h2 className="text-lg md:text-2xl font-medium tracking-tight text-slate-950 dark:text-slate-300 max-w-3xl animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300 z-10">
+      <h2 className="text-lg md:text-2xl font-medium tracking-tight text-black dark:text-slate-100 max-w-3xl animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300 z-10 drop-shadow-sm">
         Bihar’s Leading NGO-Driven Skill & Career Institute
       </h2>
 
-      <p className="text-lg text-slate-950 dark:text-slate-300 max-w-2xl mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 mt-6 z-10">
+      <p className="text-lg text-slate-950 dark:text-slate-100 max-w-2xl mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 mt-6 z-10 font-bold drop-shadow-sm">
         Gain industry-ready skills through BSDM-certified programs like KYP & BSCFA.
         Learn from expert trainers, build real digital skills, and unlock new career opportunities.
       </p>

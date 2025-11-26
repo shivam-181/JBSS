@@ -13,7 +13,7 @@ import { HeroSection } from "@/components/landing-page/hero-section";
 import { FeaturedCourses } from "@/components/landing-page/featured-courses";
 import { ContactSection } from "@/components/landing-page/contact-section";
 import { Footer } from "@/components/landing-page/footer";
-import { FeaturesSection } from "@/components/landing-page/features-section";
+import { FeaturesSection } from "@/components/landing-page/impact-section";
 export default async function Home() {
   // Fetch top 4 courses for the featured section
   const courses = await db.course.findMany({
@@ -35,6 +35,7 @@ export default async function Home() {
       
       {/* 1. HERO SECTION */}
       <HeroSection />
+      
       {/* 2. FEATURES SECTION (NEW POSITION) */}
       <FeaturesSection />
 
