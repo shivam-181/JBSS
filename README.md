@@ -32,6 +32,11 @@ A production-ready, full-stack Learning Management System designed to empower st
 - **Video**: [Mux](https://www.mux.com/)
 - **AI**: [Google Gemini API](https://ai.google.dev/)
 
+## 📄 License
+
+© 2024 JBSS Education. All Rights Reserved.
+Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
+
 ## 🏁 Getting Started
 
 Follow these steps to set up the project locally.
@@ -94,10 +99,8 @@ Follow these steps to set up the project locally.
 
     Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
 
-This project is licensed under the MIT License.
